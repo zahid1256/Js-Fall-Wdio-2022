@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/zahid1256/Js-Fall-Wdio-2022#readme",
   "dependencies": {
-    "@wdio/cli": "^7.26.0",
     "chai": "^4.3.7",
     "moment": "^2.29.4"
   },
   "devDependencies": {
+    "@wdio/cli": "^7.26.0",
     "@wdio/local-runner": "^7.26.0",
     "@wdio/mocha-framework": "^7.26.0",
     "@wdio/spec-reporter": "^7.26.0",
