@@ -1,3 +1,7 @@
+
+const { expect } = require('chai');
+const moment= require('moment')
+
 class Commands {
     /**
      * 
@@ -86,8 +90,20 @@ class Commands {
             */
             return await $(locator).getAttribute(attrName);
         }
+
+        async isWebElementSelected(locator) {
+            return await $(locator).isSelected()
+        }
     
-    
+        async isWebElementDisplayed(locator) {
+            return await $(locator).isDisplayed()
+        }
+
+        async isWebElementEnabled(locator) {
+            return await $(locator).isEnabled()
+        }
+
+        
     
     }
     module.exports = Commands;

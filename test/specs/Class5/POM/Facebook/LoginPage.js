@@ -8,10 +8,8 @@ class LoginPage {
     loginEmailLocator = '#email';
     loginPassLocator = '#pass';
     loginButtonLocator = '<button>';
-
-    createNewAccountLocator = '//a[text()="Create New Account" or text()="Create new account"]';
-
-
+    createNewAccountButtonLocator = '//a[text()="Create New Account" or text()="Create new account"]'
+    messengerLinkLocator = '=Messenger'
 
     // functions to interact with the web-Elements on the LoginPage
     async enterLoginEmail(userEmail) {
@@ -26,13 +24,13 @@ class LoginPage {
         await this.commands.clickWebElement(this.loginButtonLocator);
     }
 
-
     async clickCreateNewAccountButton() {
-        await this.commands.clickWebElement(this.createNewAccountLocator);
+        await this.commands.clickWebElement(this.createNewAccountButtonLocator);
+
     }
 
-
-
-
+    async clickMessengerLink() {
+        await this.commands.clickWebElement(this.messengerLinkLocator)
+    }
 }
 module.exports = LoginPage;
