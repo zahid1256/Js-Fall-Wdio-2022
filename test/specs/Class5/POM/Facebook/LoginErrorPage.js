@@ -11,6 +11,6 @@ class LoginErrorPage {
         return await $(this.loginErrorMsgLocator).isDisplayed();
     }
 
-
+    
 }
 module.exports = LoginErrorPage
