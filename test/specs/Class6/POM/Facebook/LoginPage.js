@@ -8,6 +8,9 @@ class LoginPage {
     loginEmailLocator = '#email';
     loginPassLocator = '#pass';
     loginButtonLocator = '<button>';
+    createNewAccountLocator = '//a[text()="Create New Account" or text()="Create new account"]';
+    oculusLinkLocator = '=Oculus'
+
 
     // functions to interact with the web-Elements on the LoginPage
     async enterLoginEmail(userEmail) {
@@ -23,6 +26,13 @@ class LoginPage {
     }
 
 
+    async clickCreateNewAccountButton() {
+        await this.commands.clickWebElement(this.createNewAccountLocator);
+    }
+
+    async clickOculusLink() {
+        await this.commands.clickWebElement(this.oculusLinkLocator)
+    }
 
 
 }

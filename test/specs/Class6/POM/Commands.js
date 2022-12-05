@@ -87,7 +87,11 @@ class Commands {
             return await $(locator).getAttribute(attrName);
         }
     
-    
+        
+        async isWebElementDisplayed(locator) {
+            await $(locator).isDisplayed()
+
+        }
     
     }
     module.exports = Commands;

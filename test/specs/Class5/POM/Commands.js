@@ -103,7 +103,55 @@ class Commands {
             return await $(locator).isEnabled()
         }
 
-        
-    
+        /**
+     * Generic function to select data in dropdown (using Visible text)
+     * name: selectDataInDropdown
+     * input: locatorDropdown, valueWantToSelect
+     */
+    async selectDataInDropdown(locator, dataToSelect) {
+        const dropdown = await $(locator);
+        dropdown.selectByVisibleText(dataToSelect);
     }
-    module.exports = Commands;
+
+    /**
+     * Generic function to move mouse on any web-Element
+     * name: moveMouseOn
+     * input: locator
+     */
+    async moveMouseOn(locator) {
+        await $(locator).moveTo();
+    }
+
+    /**
+     * Generic function to get window handle
+     * name: getHandle
+     * 
+     */  
+    async getHandle() {
+        return await browser.getWindowHandle();
+    }
+
+    /**
+     * Generic function to get ALL window handle
+     * name: getHandles
+     * 
+     */  
+    async getHandles() {
+        return await browser.getWindowHandles();
+    }
+
+    /**
+     * Generic function to switch to a new handle
+     * name: switchToWindowHandle
+     * input: newHandle
+     * 
+     */  
+    async switchToWindowHandle(newHandle) {
+        return await browser.switchToWindow(newHandle);
+    }
+
+
+}
+module.exports = Commands;
+    
+    
